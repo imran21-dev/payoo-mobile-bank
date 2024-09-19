@@ -34,7 +34,7 @@
                             </p>
                            
                           </div>
-                        </div>
+                        </div> 
                       </div>
 
                       <button class="btn btn-outline border-gray-200 bg-transparent text-sm font-normal text-gray-400 px-5 h-max py-2 min-h-max rounded-xl"><i class="fa-regular fa-arrow-left-from-bracket"></i>Log Out</button>
@@ -45,7 +45,7 @@
            <section class="bg-white px-5 rounded-b-3xl shadow-sm">
 
              <div class="flex items-center pt-7 pb-3">
-                <img class="w-7" src="assets/fire.png" alt="">
+                <img class="w-7 " src="assets/fire.png" alt="">
                 <h1 class="text-2xl font-bold">  Welcome to Payooo!  </h1>
             </div>
             <p class="text-gray-500 text-base">
@@ -56,23 +56,23 @@
                       <img class="w-1/3" src="assets/wallet.png" alt="">
                       <h4 id="id" class="text-sm font-normal ">Add Money</h4>
                    </a>
-                   <a class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
+                   <a href="#cashOut" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/money.png" alt="">
                       <h4 class="text-sm font-normal ">Cash Out</h4>
                    </a>
-                   <a class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
+                   <a href="#transferMoney" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/mobile-transfer.png" alt="">
                       <h4 class="text-sm font-normal ">Transfer Money</h4>
                    </a>
-                   <a class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
+                   <a href="#getBonus" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/bonus.png" alt="">
                       <h4 class="text-sm font-normal ">Get Bonus</h4>
                    </a>
-                   <a class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
+                   <a href="#payBill" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/wallet (1).png" alt="">
                       <h4 class="text-sm font-normal ">Pay Bill</h4>
                    </a>
-                   <a class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
+                   <a href="#history" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/successful.png" alt="">
                       <h4 class="text-sm font-normal ">Transactions</h4>
                    </a>
@@ -80,7 +80,7 @@
             </section>
            </section>
 <!-- latest payment -->
-           <section id="latestPayment" class="hidden px-5 pt-7">
+           <section id="latestPayment" class=" px-5 pt-7">
               <div class="flex items-center justify-between">
                  <h1 class="text-xl font-semibold">Latest Payment</h1>
                  <a class="link link-hover text-gray-400">View All</a>
@@ -129,7 +129,7 @@
               </section>
            </section>
            <!-- add money   -->
-            <section id="addMoney" class="px-5 pt-7 pb-4">
+            <section id="addMoney" class="hidden px-5 pt-7 pb-4">
                <div class="flex items-center justify-between">
                   <h1 class="text-xl font-semibold">Add Money</h1>
                  
@@ -144,9 +144,9 @@
                     </div> 
                     <div class="form-control">
                       <label class="label">
-                        <span class="label-text font-semibold text-base">Amount to Add</span>
+                        <span class="label-text font-semibold text-base">Amount</span>
                       </label>
-                      <input  type="number" placeholder="Add amount to Balance" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input  type="number" placeholder="Enter amount to add Balance" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                     </div>
                     <div class="form-control">
                       <label class="label">
@@ -160,6 +160,175 @@
                     </div>
                   </form>
                 </div>
+            </section>
+            <!-- cash out -->
+            <section id="cashOut" class="hidden px-5 pt-7 pb-4">
+               <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-semibold">Cash Out</h1>
+                 
+               </div>
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-4 rounded-3xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Agent Number</span>
+                      </label>
+                      <input  type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div> 
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Amount</span>
+                      </label>
+                      <input  type="number" placeholder="Enter amount to withdraw" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Pin Number</span>
+                      </label>
+                      <input type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                     
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn btn-primary rounded-full text-lg text-white">Withdraw Money</button>
+                    </div>
+                  </form>
+                </div>
+            </section>
+            <!-- transfer money -->
+            <section id="transferMoney" class="hidden px-5 pt-7 pb-4">
+               <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-semibold">Transfer Money</h1>
+                 
+               </div>
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-4 rounded-3xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">User Account Number</span>
+                      </label>
+                      <input  type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div> 
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Amount</span>
+                      </label>
+                      <input  type="number" placeholder="Enter amount to transfer" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Pin Number</span>
+                      </label>
+                      <input type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                     
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn btn-primary rounded-full text-lg text-white">Send Now</button>
+                    </div>
+                  </form>
+                </div>
+            </section>
+            <!-- get bonus -->
+            <section id="getBonus" class="hidden px-5 pt-7 pb-4">
+               <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-semibold">Get Bonus</h1>
+                 
+               </div>
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-4 rounded-3xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Enter Bonus Coupon</span>
+                      </label>
+                      <input  type="text" placeholder="Enter your coupon" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div> 
+                    
+                    <div class="form-control mt-3">
+                      <button class="btn btn-primary rounded-full text-lg text-white">Get Bonus</button>
+                    </div>
+                  </form>
+                </div>
+            </section>
+            <!-- pay bill -->
+            <section id="payBill" class="hidden px-5 pt-7 pb-4">
+               <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-semibold">Pay Bill</h1>
+                 
+               </div>
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-4 rounded-3xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Biller Account Number</span>
+                      </label>
+                      <input  type="number" placeholder="Enter account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div> 
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Amount to Pay</span>
+                      </label>
+                      <input  type="number" placeholder="Add amount to pay" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-semibold text-base">Pin Number</span>
+                      </label>
+                      <input type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                     
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn btn-primary rounded-full text-lg text-white">Pay Now</button>
+                    </div>
+                  </form>
+                </div>
+            </section>
+            <!-- history -->
+            <section id="history" class="hidden px-5 pt-7">
+               <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-semibold">Transaction History</h1>
+                  <a class="link link-hover text-gray-400">View All</a>
+               </div>
+               <section class="pt-4 flex flex-col gap-3">
+                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
+                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
+                         <img class="w-2/3" src="assets/wallet.png" alt="">
+                       </figure>
+                       <div class="flex-1 pl-2">
+                           <h1 class="text-lg font-medium">Electricity Bill</h1>
+                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
+                       </div>
+                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
+                   </div>
+                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
+                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
+                         <img class="w-2/3" src="assets/wallet.png" alt="">
+                       </figure>
+                       <div class="flex-1 pl-2">
+                           <h1 class="text-lg font-medium">Bank Deposit</h1>
+                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
+                       </div>
+                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
+                   </div>
+                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
+                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
+                         <img class="w-2/3" src="assets/wallet.png" alt="">
+                       </figure>
+                       <div class="flex-1 pl-2">
+                           <h1 class="text-lg font-medium">Mobile recharge</h1>
+                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
+                       </div>
+                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
+                   </div>
+                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
+                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
+                         <img class="w-2/3" src="assets/wallet.png" alt="">
+                       </figure>
+                       <div class="flex-1 pl-2">
+                           <h1 class="text-lg font-medium">Gas Bill</h1>
+                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
+                       </div>
+                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
+                   </div>
+               </section>
             </section>
     </main>
 </body>
