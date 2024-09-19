@@ -29,20 +29,36 @@
                 <label class="label">
                   <span class="label-text font-semibold text-base">Mobile Number</span>
                 </label>
-                <input  type="number" placeholder="Enter your number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                <input id="number"  type="number" placeholder="Enter your number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-semibold text-base">4 Digit Pin</span>
                 </label>
-                <input type="password" placeholder="Enter 4-Digit pin" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                <input id="pin" type="password" placeholder="Enter 4-Digit pin" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary rounded-full text-lg text-white">Login</button>
+                <button id="loginBtn" class="btn btn-primary rounded-full text-lg text-white">Login</button>
               </div>
             </form>
           </div>
+
+          <!-- alert -->
+           <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Failed!</h3>
+    <p class="py-4">Wrong number or pin. Please try again</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     </main>
     <script src="index.js"></script>
 </body>
