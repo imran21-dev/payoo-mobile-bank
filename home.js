@@ -3,29 +3,40 @@
 
 document.getElementById('addMoneyBtn')
 .addEventListener('click', function () { 
+    cartBg('addMoneyBtn')
    sectionAdd('addMoney') 
 })
 document.getElementById('cashOutBtn')
 .addEventListener('click', function () {  
+    cartBg('cashOutBtn')
+    
     sectionAdd('cashOut')
 })
 document.getElementById('transferMoneyBtn')
 .addEventListener('click', function () {
+    cartBg('transferMoneyBtn')
+
    sectionAdd('transferMoney')
     
 })
 document.getElementById('getBonusBtn')
 .addEventListener('click', function () {
+    cartBg('getBonusBtn')
+
    sectionAdd('getBonus')
    
 })
 document.getElementById('payBillBtn')
 .addEventListener('click', function () {
+    cartBg('payBillBtn')
+
    sectionAdd('payBill')
   
 })
 document.getElementById('historyBtn')
 .addEventListener('click', function () {
+    cartBg('historyBtn')
+
    sectionAdd('history')
  
 })
@@ -47,8 +58,26 @@ document.getElementById('addMoneyBalance')
     if (number === '01301460344' && pin === 2430) {
       const newBalance =  accountBalance + amount;
       document.getElementById('accountBalance').innerText = newBalance
+       document.getElementById('my_modal_4').innerHTML = `
+        <div class="modal-box">
+                <h3 class="text-lg font-bold">Complete!</h3>
+                <p class="pt-4 pb-1">You have successfully added <span class="text-green-600">$${amount}</span></p>
+                <h2 class="text-xl">Your current balance <span class=" text-blue-700">$${newBalance}</span> </h2>
+                <div id="modalBalance"></div>
+                <div class="modal-action">
+                  <form method="dialog">
+                   
+                    <button id="completeBtn" class="btn btn-primary text-white">Okay</button>
+                  </form>
+                </div>
+              </div>
+              `
+              my_modal_4.showModal()
+              document.getElementById('completeBtn').addEventListener('click', function () {
+              document.getElementById('header').scrollIntoView({behavior : "smooth"})
+
+              })
     //   window.location.hash='header'
-        document.getElementById('header').scrollIntoView({behavior : "smooth"})
        const time = new Date().toLocaleString();
 
         const historContainer = document.getElementById('historContainer');
@@ -96,15 +125,34 @@ document.getElementById('cashOutBalance')
      
       const newMessage =  document.getElementById('modalBalance');
             newMessage.innerHTML = `
-            <h3>Your current balance : <span class="text-blue-500">$${accountBalance}</span></h3>`
+            <h3>Your current balance : <span class="btn-primary">$${accountBalance}</span></h3>`
       my_modal_2.showModal()
    }
    
     else if (number === '01301460344' && pin === 2430) {
       const newBalance =  accountBalance - amount;
       document.getElementById('accountBalance').innerText = newBalance
+      document.getElementById('my_modal_4').innerHTML = `
+        <div class="modal-box">
+                <h3 class="text-lg font-bold">Complete!</h3>
+                <p class="pt-4 pb-1 text-xl">You have successfully withdraw <span class="text-green-600">$${amount}</span></p>
+                <h2 >Your current balance <span class="text-blue-700">$${newBalance}</span> </h2>
+                <div id="modalBalance"></div>
+                <div class="modal-action">
+                  <form method="dialog">
+                   
+                    <button id="completeBtn" class="btn btn-primary text-white">Okay</button>
+                  </form>
+                </div>
+              </div>
+              `
+              my_modal_4.showModal()
+              document.getElementById('completeBtn').addEventListener('click', function () {
+              document.getElementById('header').scrollIntoView({behavior : "smooth"})
+
+              })
     //   window.location.hash='header'
-        document.getElementById('header').scrollIntoView({behavior : "smooth"})
+      
        const time = new Date().toLocaleString();
           
         const historContainer = document.getElementById('historContainer');

@@ -25,3 +25,18 @@ function getInnerText(id) {
   return innerText
 }
 
+// cart bg
+
+function cartBg(id) {
+    document.getElementById('addMoneyBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+    document.getElementById('cashOutBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+    document.getElementById('transferMoneyBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+    document.getElementById('getBonusBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+    document.getElementById('payBillBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+    document.getElementById('historyBtn').className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 "
+
+    document.getElementById(id).className = "w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 bg-green-50 border-green-500 text-green-500"
+    
+
+
+}
