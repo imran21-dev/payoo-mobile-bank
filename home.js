@@ -152,3 +152,9 @@ document.getElementById('bonusBtn').addEventListener('click', function () {
 document.getElementById('payBtn').addEventListener('click', function () {
   my_modal_3.showModal()    
 })
+
+// log out
+document.getElementById('logOutBtn').addEventListener('click' ,function () {
+    location.href = 'index.html'
+        
+})
