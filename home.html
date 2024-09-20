@@ -19,7 +19,7 @@
 </style>
 </head>
 <body class="font-[Outfit] bg-gray-100">
-    <header class="bg-white border border-b border-gray-200">
+    <header id="header" class="bg-white border border-b border-gray-200">
           <section class="flex items-center justify-between px-5 py-5">
         
                     <div class="hero px-0">
@@ -28,7 +28,7 @@
                             src="assets/check-mark.png"
                             class=" rounded-lg w-2/12" />
                           <div>
-                            <h1 class="text-xl font-extrabold"><span>$</span>4000</h1>
+                            <h1  class="text-xl font-extrabold">$<span id="accountBalance">4000</span></h1>
                             <p class="text-sm text-gray-500">
                               Available Balance
                             </p>
@@ -62,7 +62,7 @@
                    </a>
                    <a id="transferMoneyBtn" href="#transferMoney" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/mobile-transfer.png" alt="">
-                      <h4 class="text-sm font-normal ">Transfer Money</h4>
+                      <h4 class="text-sm font-normal ">Transfer</h4>
                    </a>
                    <a id="getBonusBtn" href="#getBonus" class="w-full  btn btn-outline flex items-center flex-col justify-center h-max border-gray-200 py-5 px-2 hover:bg-green-50 hover:border-green-500 hover:text-green-500">
                       <img class="w-1/3" src="assets/bonus.png" alt="">
@@ -140,23 +140,23 @@
                       <label class="label">
                         <span class="label-text font-semibold text-base">Bank Account Number</span>
                       </label>
-                      <input  type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="addMoneyNumber" type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                     </div> 
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text font-semibold text-base">Amount</span>
                       </label>
-                      <input  type="number" placeholder="Enter amount to add Balance" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="addMoneyAmount"  type="number" placeholder="Enter amount to add Balance" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                     </div>
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text font-semibold text-base">Pin Number</span>
                       </label>
-                      <input type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="pinNumber" type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                      
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary rounded-full text-lg text-white">Add Money</button>
+                      <button  id="addMoneyBalance" class="btn btn-primary rounded-full text-lg text-white">Add Money</button>
                     </div>
                   </form>
                 </div>
@@ -173,23 +173,23 @@
                       <label class="label">
                         <span class="label-text font-semibold text-base">Agent Number</span>
                       </label>
-                      <input  type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="cashOutNumber"  type="number" placeholder="Enter 11 digit account number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                     </div> 
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text font-semibold text-base">Amount</span>
                       </label>
-                      <input  type="number" placeholder="Enter amount to withdraw" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="cashOutAmount"  type="number" placeholder="Enter amount to withdraw" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                     </div>
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text font-semibold text-base">Pin Number</span>
                       </label>
-                      <input type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
+                      <input id="cashOutPin" type="password" placeholder="Enter 4-Digit pin Number" class="input rounded-full bg-slate-100 placeholder:font-light" required />
                      
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary rounded-full text-lg text-white">Withdraw Money</button>
+                      <button id="cashOutBalance" class="btn btn-primary rounded-full text-lg text-white">Withdraw Money</button>
                     </div>
                   </form>
                 </div>
@@ -222,7 +222,7 @@
                      
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary rounded-full text-lg text-white">Send Now</button>
+                      <button id="trBtn" class="btn btn-primary rounded-full text-lg text-white">Send Now</button>
                     </div>
                   </form>
                 </div>
@@ -243,7 +243,7 @@
                     </div> 
                     
                     <div class="form-control mt-3">
-                      <button class="btn btn-primary rounded-full text-lg text-white">Get Bonus</button>
+                      <button id="bonusBtn" class="btn btn-primary rounded-full text-lg text-white">Get Bonus</button>
                     </div>
                   </form>
                 </div>
@@ -276,7 +276,7 @@
                      
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary rounded-full text-lg text-white">Pay Now</button>
+                      <button id="payBtn" class="btn btn-primary rounded-full text-lg text-white">Pay Now</button>
                     </div>
                   </form>
                 </div>
@@ -287,53 +287,60 @@
                   <h1 class="text-xl font-semibold">Transaction History</h1>
                   <a class="link link-hover text-gray-400">View All</a>
                </div>
-               <section class="pt-4 flex flex-col gap-3">
-                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
-                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                         <img class="w-2/3" src="assets/wallet.png" alt="">
-                       </figure>
-                       <div class="flex-1 pl-2">
-                           <h1 class="text-lg font-medium">Electricity Bill</h1>
-                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
-                       </div>
-                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
-                   </div>
-                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
-                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                         <img class="w-2/3" src="assets/wallet.png" alt="">
-                       </figure>
-                       <div class="flex-1 pl-2">
-                           <h1 class="text-lg font-medium">Bank Deposit</h1>
-                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
-                       </div>
-                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
-                   </div>
-                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
-                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                         <img class="w-2/3" src="assets/wallet.png" alt="">
-                       </figure>
-                       <div class="flex-1 pl-2">
-                           <h1 class="text-lg font-medium">Mobile recharge</h1>
-                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
-                       </div>
-                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
-                   </div>
-                   <div class="flex items-center bg-white px-4 py-2 shadow-sm rounded-2xl">
-                       <figure class="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                         <img class="w-2/3" src="assets/wallet.png" alt="">
-                       </figure>
-                       <div class="flex-1 pl-2">
-                           <h1 class="text-lg font-medium">Gas Bill</h1>
-                           <p class="text-sm text-gray-400">Today 01:22 AM</p>
-                       </div>
-                       <a href="#"><i class="fa-regular fa-ellipsis-vertical text-xl text-gray-500 px-2"></i></a>
-                   </div>
+               <section id="historContainer" class="pt-4 flex flex-col gap-3">
+                   
+                   <!-- Dynamic history appear here -->
+
                </section>
             </section>
 
 
 
-            <script src="home.js"></script>
-    </main>
+
+
+            <!-- alert -->
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Failed!</h3>
+                <p class="py-4">Wrong number or pin. Please try again</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-blue-500 text-white">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <dialog id="my_modal_2" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Failed!</h3>
+                <p class="pt-4 pb-1">You have not enough balance that you want.</p>
+                <div id="modalBalance"></div>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-blue-500 text-white">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <dialog id="my_modal_3" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Ohhhooo!</h3>
+                <p class="pt-4 pb-1">This feature is coming soon.</p>
+                <div id="modalBalance"></div>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-blue-500 text-white">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </main>
+
+
+          <script src="feature.js"></script>
+          <script src="home.js"></script>
 </body>
 </html>

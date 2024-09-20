@@ -3,7 +3,7 @@ document.getElementById('loginBtn').addEventListener('click', function (event) {
    const mobileNumber = document.getElementById('number').value;
    const pin = document.getElementById('pin').value;
    console.log(typeof pin,typeof mobileNumber)
-   if (mobileNumber === '01301460344' && pin === '243010') {
+   if (mobileNumber === '01301460344' && pin === '2430') {
       location.href = 'home.html'
    }
    else{
