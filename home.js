@@ -125,7 +125,7 @@ document.getElementById('cashOutBalance')
      
       const newMessage =  document.getElementById('modalBalance');
             newMessage.innerHTML = `
-            <h3>Your current balance : <span class="btn-primary">$${accountBalance}</span></h3>`
+            <h3>Your current balance : <span class="text-blue-700">$${accountBalance}</span></h3>`
       my_modal_2.showModal()
    }
    
